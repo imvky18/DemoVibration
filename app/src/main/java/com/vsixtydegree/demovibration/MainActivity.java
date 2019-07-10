@@ -22,17 +22,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+//inti
         btVibrate = findViewById(R.id.btVibrate);
 
         vibrate = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
-
+//Simple click
         btVibrate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-
+//o stands oreo
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     vibrate.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE));
                 } else {
